@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.modal-body {
+  /* Sidebar / Navigation */
+  /* Form Section */
+  /* Input / Select / Date styles */
+  /* ✅ Responsive - Mobile */
+}
+.modal-body .pds-form {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.modal-body .pds-form .btn-import-employee {
+  width: 100%;
+}
+.modal-body .pds-nav {
+  width: 220px;
+  min-width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+  overflow-y: auto;
+  transition: none !important;
+}
+.modal-body .pds-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.modal-body .pds-nav li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+}
+.modal-body .pds-nav li:hover, .modal-body .pds-nav li.active {
+  background: #eaeaea;
+  color: #333;
+  font-weight: bold;
+}
+.modal-body .form-section {
+  flex: 1;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+.modal-body .form-section h3 {
+  margin-bottom: 10px;
+  color: #555;
+}
+.modal-body .form-section .input-wrapper.span-2 {
+  grid-column: span 2;
+}
+.modal-body .form-section .input-wrapper.span-3 {
+  grid-column: span 3;
+}
+.modal-body .form-grid .personal-info,
+.modal-body .form-grid .govt-info,
+.modal-body .form-grid .contact-address-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.modal-body label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+  color: #898989;
+}
+.modal-body input,
+.modal-body select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.modal-body input:focus,
+.modal-body select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.modal-body input[type=date] {
+  /* optional: consistent appearance for date inputs */
+}
+@media (max-width: 768px) {
+  .modal-body .pds-form {
+    flex-direction: column;
+  }
+  .modal-body .pds-nav {
+    width: 100%; /* Full width */
+    min-width: unset; /* Override min-width */
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+  .modal-body .pds-nav ul {
+    display: flex; /* Horizontal nav */
+    gap: 8px;
+    overflow-x: auto; /* Scrollable kung hindi kasya */
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+  }
+  .modal-body .pds-nav li {
+    flex: none; /* Hindi mag-shrink */
+    padding: 8px 12px;
+  }
+  .modal-body .form-section {
+    padding: 16px;
+  }
+}/*# sourceMappingURL=pdsformmodal.css.map */
