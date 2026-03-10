@@ -1,0 +1,24 @@
+.grid {
+    .form-section {
+        .input-wrapper {
+            &.span-2 { grid-column: span 2; }
+            &.span-3 { grid-column: span 3; }
+            &.span-4 { grid-column: span 4; }
+            margin-bottom: 10px; // common spacing
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+
+            label {
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 4px;
+                display: block;
+                color: #898989;
+            }
+        }
+    }
+}

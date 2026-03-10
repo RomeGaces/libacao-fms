@@ -1,0 +1,31 @@
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    }
+}
+
+.input-sm {
+    padding: 4px 6px;
+    font-size: 12px;
+}
+
+.input-md {
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.input-lg {
+    padding: 12px 14px;
+    font-size: 16px;
+}

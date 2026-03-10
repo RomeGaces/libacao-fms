@@ -1,0 +1,60 @@
+.deptdiv-table-container {
+    display: flex;
+    gap: 20px; /* space between tables */
+    align-items: flex-start;
+
+    .deptdiv-table-wrapper {
+        flex: 1; /* equal width */
+        background: #fff;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 0px;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            color: #5b5b5b;
+        }
+    }
+    
+    .deptdiv-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .icon-add {
+            width: 12px;
+            height: 12px;
+            margin-right: 2px;
+            filter: brightness(0) invert(1);
+        }
+
+        .search-inp {
+            width: 40%;
+        }
+    }
+    
+    th,
+    td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 13px;
+    }
+    
+    .btn-action {
+        margin-right: 4px;
+        margin-top: 4px;
+        border-radius: 4px;
+    }
+
+    .icon {
+		width: 22px;
+		height: 22px;
+		object-fit: contain;
+		padding: 2px;
+	  }
+}
