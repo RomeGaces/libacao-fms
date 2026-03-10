@@ -1,0 +1,87 @@
+<script setup>
+const props = defineProps({
+  item: {
+    type: Object,
+    required: true,
+  },
+})
+
+const isOpen = ref(false)
+</script>
+
+<template>
+  <li
+    class="nav-group"
+    :class="isOpen && 'open'"
+  >
+    <div
+      class="nav-group-label"
+      @click="isOpen = !isOpen"
+    >
+      <VIcon
+        :icon="item.icon || 'bxs-circle'"
+        class="nav-item-icon"
+      />
+      <span class="nav-item-title">{{ item.title }}</span>
+      <span
+        class="nav-item-badge"
+        :class="item.badgeClass"
+      >
+        {{ item.badgeContent }}
+      </span>
+      <VIcon
+        icon="bx-chevron-right"
+        class="nav-group-arrow"
+      />
+    </div>
+    <div class="nav-group-children-wrapper">
+      <ul class="nav-group-children">
+        <slot />
+      </ul>
+    </div>
+  </li>
+</template>
+
+<style lang="scss">
+.layout-vertical-nav {
+  .nav-group {
+    &-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .nav-item-icon {
+        font-size: 16px; // ⬅ smaller group icon
+        margin-right: 0.4rem;
+      }
+
+      .nav-item-title {
+        flex-grow: 1;
+        font-size: 12px; // ⬅ smaller font
+        line-height: 1.2;
+      }
+
+      .nav-item-badge {
+        font-size: 0.65rem; // ⬅ smaller badge font
+        padding: 1px 4px;
+      }
+    }
+
+    .nav-group-children-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-in-out;
+
+      .nav-group-children {
+        overflow: hidden;
+      }
+    }
+
+    &.open {
+      .nav-group-children-wrapper {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+}
+</style>
